@@ -5,7 +5,7 @@ from pydantic import BaseModel, Field
 import onnxruntime as ort
 import numpy as np
 
-session = ort.InferenceSession("ml/diabetes_model.onnx", providers=["CPUExecutionProvider"])
+session = ort.InferenceSession("homework-20250414/ml/diabetes_model.onnx", providers=["CPUExecutionProvider"])
 input_name = session.get_inputs()[0].name
 
 app = FastAPI()
